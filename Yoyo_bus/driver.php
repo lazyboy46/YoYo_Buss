@@ -108,6 +108,9 @@ $user_type  = $user_row['user_type'];
 					  <li class="nav-item active">
                         <a class="nav-link" href="schedule.php">View Schedule</a>
                       </li>
+					  <li class="nav-item active">
+                        <a class="nav-link" href="report.php">Report</a>
+                      </li>
                       
                       
                       
@@ -180,7 +183,7 @@ $num_rows = mysqli_num_rows($result);
 						  <tbody>
 <?php
 include ('db/dbcon.php');
-$result= mysqli_query($con,"select * from driver order by driverid DESC") or die (mysqli_error());
+$result= mysqli_query($con,"CALL `getdriver`()") or die (mysqli_error());
 while ($row= mysqli_fetch_array ($result) ){
 $id=$row['driverid'];
 ?>

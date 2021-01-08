@@ -130,6 +130,12 @@ $user_type  = $user_row['user_type'];
                                 <label for="contact_number">Contact Number</label>
                                 <input type="text" maxlength="15" id="contact_number" name="contact_number" value="" placeholder="Contact Number" class="login" required />
                             </div> <!-- /field -->
+
+                            <div class="field">
+                            <label for="experience">Experience</label>
+                               <input type="number" id="experience" name="experience" value="" placeholder="Experience" class="login" required />
+                            </div>
+
                             
                             <div class="field">
                                 <label for="confirm_password">Profile Image</label>

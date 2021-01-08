@@ -1,4 +1,4 @@
-<?php	
+							<?php	
 							include ('db/dbcon.php');
 							if (!isset($_FILES['image']['tmp_name'])) {
 							echo "";
@@ -25,10 +25,13 @@
 									$firstname = $_POST['firstname'];
 									$lastname = $_POST['lastname'];
 									$contact_number = $_POST['contact_number'];
+									$experience = $_POST['experience'];
 								
-						 mysqli_query($con,"insert into driver (firstname,lastname,contact_number,profile,date_added)
-						values ('$firstname','$lastname','$contact_number','$profile',DATE_FORMAT(NOW(),'%b %d %Y %h:%i %p'))")or die( mysqli_error());						
-						echo "<script>alert('Driver Added!'); window.location='driver.php'</script>";
+									 mysqli_query($con,"insert into driver (firstname,lastname,contact_number,profile,experience,date_added)
+									values ('$firstname','$lastname','$contact_number','$profile','$experience',DATE_FORMAT(NOW(),'%b %d %Y %h:%i %p'))") or die( mysqli_error());						
+									echo "<script>alert('Driver Added!'); window.location='driver.php'</script>"; 
+									/* mysqli_query($con,"CALL driver_insert(firstname,lastname,contact_number,profile,experience)");
+									echo "<script>alert('Driver Added!'); window.location='driver.php'</script>";  */
 									}
 									}
 							}

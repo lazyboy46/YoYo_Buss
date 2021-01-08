@@ -97,6 +97,9 @@ $user_type  = $user_row['user_type'];
                         <li class="nav-item active">
                         <a class="nav-link" href="schedule.php">View Schedule</a>
                       </li>
+                      <li class="nav-item active">
+                        <a class="nav-link" href="report.php">Report</a>
+                      </li>
                       
                         
                         
